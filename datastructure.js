@@ -11,7 +11,7 @@ var line;
 // Read data from STDIN
 //  STDIN must be comma separated data with the following columns:
 //  userid,parentid,childid,childname,idirectory
-var lines = fs.readFileSync('./hierarchy6.csv').toString().split("\n");
+var lines = fs.readFileSync('./examples/hierarchy6.csv').toString().split("\n");
 
 // Datastructure objects
 var hierarchy_pc = {}; // Intermediary object to store parent to child relationship

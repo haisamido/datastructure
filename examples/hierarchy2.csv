@@ -1,0 +1,6 @@
+1,<HOME>,a,TRUE
+1,a,a1,TRUE
+1,a,a2,TRUE
+1,a2,a2.txt,FALSE
+1,<HOME>,b,TRUE
+1,<HOME>,c.txt,FALSE

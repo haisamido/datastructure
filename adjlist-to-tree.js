@@ -112,7 +112,7 @@ function getSubTree(adjList, nodeId) {
  return sisterRoot;
 }
 
-console.log(lines);
+//console.log(lines);
 var adjList = makeAdjList(lines);
 var rootTree = getSubTree(adjList, "2");
 

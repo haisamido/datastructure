@@ -1,0 +1,33 @@
+{
+   "<HOME>" : {
+      "children" : {
+         "b114cb84-e5c7-426b-9486-69019c5e76f4" : {
+            "name" : "a",
+            "children" : {
+               "s114cb84-e5c7-426b-9486-69019c5e76f4" : {
+                  "name" : "d",
+                  "children" : {},
+                  "type" : "folder"
+               },
+               "f214cb84-e5c7-426b-9486-69019c5e76f4" : {
+                  "name" : "b",
+                  "children" : {
+                     "f414cb84-e5c7-426b-9486-69019c5e8d10" : {
+                        "name" : "b1.txt",
+                        "children" : {
+                           "f214cb84-e5c7-426b-9486-69019c5e8d10" : {
+                              "name" : "c1.txt",
+                              "type" : "file"
+                           }
+                        },
+                        "type" : "file"
+                     }
+                  },
+                  "type" : "folder"
+               }
+            },
+            "type" : "folder"
+         }
+      }
+   }
+}

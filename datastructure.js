@@ -44,7 +44,7 @@ for(i in lines) {
 /*----------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
-# Step 2 of 3
+# Step 2 of 3 (don't work correctly)
 #
 # Determine if a child is also a parent; if so, add it to $hierarchy
 #

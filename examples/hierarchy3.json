@@ -1,0 +1,55 @@
+{
+   "<HOME>" : {
+      "children" : {
+         "4" : {
+            "name" : "h.txt",
+            "type" : "file"
+         },
+         "1" : {
+            "name" : "a",
+            "children" : {
+               "2" : {
+                  "name" : "b",
+                  "children" : {
+                     "2.4" : {
+                        "name" : "x",
+                        "children" : {
+                           "y" : {
+                              "name" : "x.txt",
+                              "type" : "file"
+                           }
+                        },
+                        "type" : "folder"
+                     },
+                     "2.3" : {
+                        "name" : "c",
+                        "children" : {
+                           "2.3.1" : {
+                              "name" : "c1.txt",
+                              "type" : "file"
+                           }
+                        },
+                        "type" : "folder"
+                     },
+                     "2.2" : {
+                        "name" : "b2.txt",
+                        "type" : "file"
+                     },
+                     "2.1" : {
+                        "name" : "b1.txt",
+                        "type" : "file"
+                     }
+                  },
+                  "type" : "folder"
+               }
+            },
+            "type" : "folder"
+         },
+         "3" : {
+            "name" : "g",
+            "children" : {},
+            "type" : "folder"
+         }
+      }
+   }
+}

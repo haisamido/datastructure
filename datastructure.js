@@ -77,7 +77,7 @@ for (var parentId in hierarchy_pc) {
 #-----------------------------------------------------------------------------*/
 for (var parentId in hierarchy ) { 
   if( parentId.match(/\<HOME\>/i) == null ) {
-//    delete hierarchy[parentId];
+    delete hierarchy[parentId];
   }
 }
 /*----------------------------------------------------------------------------*/

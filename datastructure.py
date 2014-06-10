@@ -45,5 +45,6 @@ for line in sys.stdin:
         type = 'file'
 
     hierarchy[(parentId,'children',childId,'name')] = childName 
+    hierarchy[(parentId,'children',childId,'type')] = type 
 
-print.pprint(hierarchy)
+pprint.pprint(hierarchy)

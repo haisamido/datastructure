@@ -3,6 +3,8 @@
 
 import sys
 import re
+import pprint
+import json
 
 type = "";
 hierarchy_pc = dict()
@@ -42,5 +44,6 @@ for line in sys.stdin:
     if isDirectory == 0:
         type = 'file'
 
-    hierarchy[parentId]['children'][childId] = { 'name': childName }
-    
+    hierarchy[(parentId,'children',childId,'name')] = childName 
+
+print.pprint(hierarchy)

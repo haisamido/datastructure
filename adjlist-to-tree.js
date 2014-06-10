@@ -46,17 +46,17 @@ function makeAdjList(lines) {
    var line_split  = line.split(",");
    var userid      = line_split[0];
    var parentId    = line_split[1];
-   var currId      = line_split[2];
+   var childId      = line_split[2];
    var currName    = line_split[3];
    var isDirectory = line_split[4];
 
    //check to make sure the parent exists in the adjList,
    //if so then add it to the parents list of children
-   if (adjList[parentId] && parentId != currId) {
+   if (adjList[parentId] && parentId != childId) {
      var parentNode = adjList[parentId];
-     var currNode   = adjList[currId]; 
+     var currNode   = adjList[childId]; 
      
-     parentNode.children[currId] = currNode;
+     parentNode.children[childId] = currNode;
    }
  }
  

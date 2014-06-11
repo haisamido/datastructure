@@ -9,6 +9,7 @@ import json
 type = "";
 hierarchy_pc = dict()
 hierarchy    = dict()
+h = dict()
 
 # Read data from STDIN
 #  STDIN must be comma separated data with the following columns:
@@ -28,7 +29,7 @@ for line in sys.stdin:
     if re.match(r'^\s*$|^\s*#', line):
         continue
       
-    print line,
+#    print line,
 
     line_split = line.split(',')
 
@@ -38,13 +39,23 @@ for line in sys.stdin:
     childName   = line_split[3]
     isDirectory = line_split[4]
         
-    if isDirectory == 1:
+    if re.match(r'1', isDirectory):
         type = 'folder'
+        hierarchy_pc[(parentId,'children',childId,'children')] = {};
 
-    if isDirectory == 0:
+    if re.match(r'0', isDirectory):
         type = 'file'
 
-    hierarchy[(parentId,'children',childId,'name')] = childName 
-    hierarchy[(parentId,'children',childId,'type')] = type 
+#    hierarchy[(parentId,'children',childId,'name')] = childName 
+#    hierarchy[(parentId,'children',childId,'type')] = type 
+    
+    hierarchy_pc[parentId] = {}
+    hierarchy_pc[parentId]['children'] = {}
+    hierarchy_pc[parentId]['children'][childId] = {}
+    hierarchy_pc[parentId]['children'][childId]['name'] = childName
+    hierarchy_pc[parentId]['children'][childId]['type'] = type
 
-pprint.pprint(hierarchy)
+#for parentId in hierarchy_pc:
+#    print parentId
+
+pprint.pprint(hierarchy_pc)

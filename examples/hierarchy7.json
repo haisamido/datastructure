@@ -1,0 +1,31 @@
+{
+   "<HOME>" : {
+      "children" : {
+         "3aabd93c-8236-4ad5-9919-c3881dd15015" : {
+            "name" : "README.txt",
+            "type" : "file"
+         },
+         "b0a4d4ef-add3-4345-ad3e-e748b3818d55" : {
+            "name" : "WIND",
+            "children" : {
+               "9df3845c-ace2-4eb9-824d-ef26b0d28369" : {
+                  "name" : "WIND.gmat",
+                  "children" : {},
+                  "type" : "folder"
+               }
+            },
+            "type" : "folder"
+         },
+         "a8d04c8b-271f-41e2-acf0-c11c77273ca9" : {
+            "name" : "ACE",
+            "children" : {
+               "3df3845c-ace2-4eb9-824d-ef26b0d28369" : {
+                  "name" : "ACE.gmat",
+                  "type" : "file"
+               }
+            },
+            "type" : "folder"
+         }
+      }
+   }
+}

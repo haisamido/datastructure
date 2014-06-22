@@ -37,30 +37,22 @@ for line in sys.stdin:
     isDirectory = line_split[4]
         
     if re.match(r'1', isDirectory):
-        type = 'folder'
-        hierarchy_pc[(parentId,'children',childId,'children')] = {};
+        xtype = 'folder'
 
     if re.match(r'0', isDirectory):
-        type = 'file'
+        xtype = 'file'
 
- #   hierarchy[(parentId,'children',childId,'name')] = childName 
- #   hierarchy[(parentId,'children',childId,'type')] = type 
-    
     hierarchy_pc[parentId] = {}
     hierarchy_pc[parentId]['children'] = {}
     hierarchy_pc[parentId]['children'][childId] = {}
     hierarchy_pc[parentId]['children'][childId]['name'] = childName
-    hierarchy_pc[parentId]['children'][childId]['type'] = type
-
-
-#print hierarchy_pc
-#print json.dumps(hierarchy)
+    hierarchy_pc[parentId]['children'][childId]['type'] = xtype
 
 for parentId in hierarchy_pc:
 
     for childId in hierarchy_pc[parentId]['children']:
-        print parentId, childId
 
+        hierarchy[parentId] = {}
+        hierarchy[parentId]['children'] = hierarchy_pc[parentId]['children']
 
-#        print key, 'corresponds to', hierarchy_pc[key]
-#pprint.pprint(hierarchy)
+pprint.pprint(hierarchy)

@@ -15,7 +15,6 @@ h = dict()
 #  STDIN must be comma separated data with the following columns:
 #  userid,parentid,childid,childname,idirectory
 
-
 #-------------------------------------------------------------------------------
 # Step 1 of 3
 #
@@ -28,8 +27,6 @@ for line in sys.stdin:
   
     if re.match(r'^\s*$|^\s*#', line):
         continue
-      
-#    print line,
 
     line_split = line.split(',')
 
@@ -46,8 +43,8 @@ for line in sys.stdin:
     if re.match(r'0', isDirectory):
         type = 'file'
 
-#    hierarchy[(parentId,'children',childId,'name')] = childName 
-#    hierarchy[(parentId,'children',childId,'type')] = type 
+ #   hierarchy[(parentId,'children',childId,'name')] = childName 
+ #   hierarchy[(parentId,'children',childId,'type')] = type 
     
     hierarchy_pc[parentId] = {}
     hierarchy_pc[parentId]['children'] = {}
@@ -55,7 +52,15 @@ for line in sys.stdin:
     hierarchy_pc[parentId]['children'][childId]['name'] = childName
     hierarchy_pc[parentId]['children'][childId]['type'] = type
 
-#for parentId in hierarchy_pc:
-#    print parentId
 
-pprint.pprint(hierarchy_pc)
+#print hierarchy_pc
+#print json.dumps(hierarchy)
+
+for parentId in hierarchy_pc:
+
+    for childId in hierarchy_pc[parentId]['children']:
+        print parentId, childId
+
+
+#        print key, 'corresponds to', hierarchy_pc[key]
+#pprint.pprint(hierarchy)

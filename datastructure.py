@@ -5,6 +5,7 @@ import re
 import pprint
 import json
 
+# Datastructure Hashes
 hierarchy_pc = dict()
 hierarchy    = dict()
 
@@ -22,8 +23,7 @@ hierarchy    = dict()
 #-------------------------------------------------------------------------------
 for line in sys.stdin:
   
-    if re.match(r'^\s*$|^\s*#', line):
-        continue
+    if re.match(r'^\s*$|^\s*#', line): continue
 
     line_split = line.split(',')
 

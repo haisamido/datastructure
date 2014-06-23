@@ -49,10 +49,16 @@ for line in sys.stdin:
     hierarchy_pc[parentId]['children'][childId]['type'] = xtype
 
 for parentId in hierarchy_pc:
+    hierarchy[parentId] = {}
+    hierarchy[parentId]['children'] = {}
 
     for childId in hierarchy_pc[parentId]['children']:
-
-        hierarchy[parentId] = {}
         hierarchy[parentId]['children'] = hierarchy_pc[parentId]['children']
+
+        if childId in hierarchy_pc:
+            hierarchy[parentId]['children'] = {}
+            hierarchy[parentId]['children'][childId] = {}
+            hierarchy[parentId]['children'][childId]['children'] = {}
+            hierarchy[parentId]['children'][childId]['children'] = hierarchy_pc[childId]['children']
 
 pprint.pprint(hierarchy)
